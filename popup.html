@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passo</title>
+    <script src="./scripts/crypto.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input id="key" type="text" class="form-control" placeholder="Enter your key" />
+        </div>
+
+        <div class="socialBtns">
+            <p>get password for</p>
+            <span class="socialBtn" title="Google" id="googleBtn"><i class="fab fa-google"></i></span>
+            <span class="socialBtn" title="Facebook" id="facebookBtn"><i class="fab fa-facebook"></i></span>
+            <span class="socialBtn" title="Youtube" id="youtubeBtn"><i class="fab fa-youtube"></i></span>
+            <span class="socialBtn" title="Twitter" id="twitterBtn"><i class="fab fa-twitter"></i></span>
+            <span class="socialBtn" title="Instagram" id="instagramBtn"><i class="fab fa-instagram"></i></span>
+            <span class="socialBtn" title="LinkedIn" id="linkedinBtn"><i class="fab fa-linkedin"></i></span>
+            <span class="socialBtn" title="Github" id="githubBtn"><i class="fab fa-github"></i></span>
+        </div>
+
+        <div class="outputContainer">
+            <span id="output"></span>
+            <i id="copyBtn" title="Copy" class="fas fa-copy"></i>
+        </div>
+
+        <p class="copyNotification">password copied to clipboard!</p>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
