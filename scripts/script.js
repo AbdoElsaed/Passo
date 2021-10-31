@@ -5,7 +5,7 @@ let twitterBtn = document.getElementById("twitterBtn");
 let instagramBtn = document.getElementById("instagramBtn");
 let linkedinBtn = document.getElementById("linkedinBtn");
 let githubBtn = document.getElementById("githubBtn");
-
+let currentSiteBtn = document.getElementById("currentSiteBtn");
 
 let copyBtn = document.getElementById("copyBtn");
 
@@ -16,6 +16,13 @@ const computeHash = (site, key) => {
   const computed = `${site}**___**${key}`;
   const encrypted = CryptoJS.HmacMD5(computed, key);
   return encrypted;
+};
+
+const getSiteUrl = (url) => {
+  let domain = new URL(url);
+  domain = domain.hostname.replace("www.", "");
+  console.log({ domain });
+  return domain;
 };
 
 const showNotification = () => {
@@ -78,8 +85,18 @@ linkedinBtn.addEventListener("click", (e) => {
 });
 
 githubBtn.addEventListener("click", (e) => {
+  let key = document.getElementById("key").value;
+  const hashed = computeHash("github.com", key);
+  outputContainer.style.display = "block";
+  output.textContent = hashed;
+});
+
+currentSiteBtn.addEventListener("click", (e) => {
+  browser.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     let key = document.getElementById("key").value;
-    const hashed = computeHash("github.com", key);
+    let site = getSiteUrl(tabs[0].url);
+    const hashed = computeHash(site, key);
     outputContainer.style.display = "block";
     output.textContent = hashed;
   });
+});

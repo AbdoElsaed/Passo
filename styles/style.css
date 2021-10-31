@@ -73,6 +73,26 @@ body {
   color: #0076B3;
 }
 
+.container .currentSite {
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(22, 22, 22, 0.774);
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #111,-2px -1px 3px rgb(34, 34, 34);
+  transition: all .2s ease-in-out;
+}
+
+.container .currentSite:hover {
+  box-shadow: 1px 1px 1px rgb(29, 29, 29), -1px -1px 1px rgb(44, 44, 44);
+
+}
+
+.container .currentSite span{
+  color: rgb(168, 164, 164);
+  font-weight:500
+}
+
 .container .outputContainer {
   position: relative;
   display: none;
