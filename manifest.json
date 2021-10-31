@@ -5,7 +5,7 @@
     "version": "1.0",
     "browser_specific_settings": {
         "gecko": {
-            "strict_min_version": "passo.1.0.0.gatsby"
+            "strict_min_version": "passo.1.0.0"
         }
     },
     "permissions": [
